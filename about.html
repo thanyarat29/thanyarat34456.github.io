@@ -6,171 +6,134 @@
     <title>About Me - ประวัติส่วนตัว</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700;800&family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Kanit', 'Sarabun', sans-serif;
+            font-family: 'Sarabun', sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 40%, #764ba2 100%);
+            background: linear-gradient(135deg, #ffe6ed 0%, #ffb6c1 50%, #f78da7 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
-        .full-wrapper {
+        .container {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 35px 25px;
             width: 100%;
-            max-width: 1200px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 40px;
-            border: 2px solid #ffffff;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
-            padding: 60px;
+            max-width: 450px;
+            box-shadow: 0 15px 35px rgba(216, 27, 96, 0.2);
+            border: 2px solid #ffccd5;
         }
 
         .page-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #ff3366, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center;
-            margin-bottom: 45px;
-            letter-spacing: 2px;
-        }
-
-        .grid-info {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            margin-bottom: 50px;
-        }
-
-        .card-info {
-            background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);
-            border: 2px solid #ffccd5;
-            border-radius: 25px;
-            padding: 25px 30px;
-            box-shadow: 0 10px 25px rgba(255, 51, 102, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .card-info:hover {
-            transform: translateY(-8px);
-            border-color: #ff3366;
-            box-shadow: 0 15px 35px rgba(255, 51, 102, 0.2);
-        }
-
-        .card-info.full-width {
-            grid-column: span 2;
-            background: linear-gradient(135deg, #ffe6ed 0%, #ffffff 100%);
-            border-color: #ff85a2;
-        }
-
-        .label {
-            font-size: 1.1rem;
-            color: #ff3366;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 8px;
-            display: block;
+            color: #d81b60;
+            text-align: center;
+            margin-bottom: 25px;
         }
 
-        .value {
-            font-size: 1.4rem;
-            color: #2c2c2c;
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            background: #fff0f3;
+            border: 1px solid #ffccd5;
+            border-radius: 16px;
+            padding: 14px 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-label {
+            color: #c2185b;
             font-weight: 600;
-            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .info-value {
+            color: #2c2c2c;
+            font-weight: 500;
+            font-size: 0.95rem;
         }
 
         .btn-group {
             display: flex;
-            gap: 20px;
-            justify-content: center;
+            justify-content: space-between;
+            gap: 10px;
         }
 
         .btn {
             display: inline-block;
             text-decoration: none;
-            font-size: 1.25rem;
-            font-weight: 700;
-            padding: 16px 45px;
-            border-radius: 50px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
             transition: all 0.3s ease;
             text-align: center;
             flex: 1;
-            max-width: 300px;
         }
 
-        .btn-back {
+        .btn-secondary {
             background: #ffffff;
-            color: #ff3366;
-            border: 3px solid #ff3366;
+            color: #d81b60;
+            border: 2px solid #ff85a2;
         }
 
-        .btn-back:hover {
-            background: #fff0f3;
-            transform: translateY(-3px);
-        }
-
-        .btn-next {
-            background: linear-gradient(135deg, #ff3366, #e91e63);
+        .btn-primary {
+            background: linear-gradient(135deg, #ff4081, #d81b60);
             color: #ffffff;
-            box-shadow: 0 10px 25px rgba(233, 30, 99, 0.3);
+            box-shadow: 0 4px 12px rgba(216, 27, 96, 0.3);
         }
 
-        .btn-next:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(233, 30, 99, 0.5);
-        }
-
-        @media (max-width: 800px) {
-            .grid-info { grid-template-columns: 1fr; }
-            .card-info.full-width { grid-column: span 1; }
-            .full-wrapper { padding: 35px 20px; }
-            .page-title { font-size: 2.5rem; }
-            .btn-group { flex-direction: column; }
-            .btn { max-width: 100%; }
+        .btn:hover {
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
-    <div class="full-wrapper">
+    <div class="container">
         <h1 class="page-title">ABOUT ME</h1>
 
-        <div class="grid-info">
-            <div class="card-info">
-                <span class="label">👤 ชื่อ-นามสกุล</span>
-                <p class="value">นางสาว ณัฐธิดา ถกลพัฒนกุล</p>
+        <div class="info-list">
+            <div class="info-item">
+                <span class="info-label">ชื่อ-นามสกุล</span>
+                <span class="info-value">ณัฐธิดา ถกลพัฒนกุล</span>
             </div>
-            <div class="card-info">
-                <span class="label">💖 ชื่อเล่น / อายุ</span>
-                <p class="value">น้ำมุก (อายุ 17 ปี)</p>
+            <div class="info-item">
+                <span class="info-label">โรงเรียน</span>
+                <span class="info-value">บ้านบึง "อุตสาหกรรมนุเคราะห์"</span>
             </div>
-            <div class="card-info">
-                <span class="label">🏫 โรงเรียน</span>
-                <p class="value">บ้านบึง "อุตสาหกรรมนุเคราะห์"</p>
+            <div class="info-item">
+                <span class="info-label">เชื้อชาติ / สัญชาติ</span>
+                <span class="info-value">ไทย / ไทย</span>
             </div>
-            <div class="card-info">
-                <span class="label">🎨 งานอดิเรก</span>
-                <p class="value">ฟังเพลง, วาดรูป, เล่นเกม</p>
-            </div>
-            <div class="card-info full-width">
-                <span class="label">🎯 คณะ / สาขาที่สนใจเข้าศึกษาต่อ</span>
-                <p class="value">สาขาเทคโนโลยีสารสนเทศเพื่ออุตสาหกรรมดิจิทัล (ITDI)<br>คณะวิทยาการสารสนเทศ มหาวิทยาลัยบูรพา</p>
+            <div class="info-item">
+                <span class="info-label">ศาสนา</span>
+                <span class="info-value">พุทธ</span>
             </div>
         </div>
 
         <div class="btn-group">
-            <a href="index.html" class="btn btn-back">&larr; ย้อนกลับหน้าแรก</a>
-            <a href="portfolio.html" class="btn btn-next">เข้าดูผลงาน &rarr;</a>
+            <a href="index.html" class="btn btn-secondary">&larr; ย้อนกลับ</a>
+            <a href="portfolio.html" class="btn btn-primary">เข้าดูผลงาน &rarr;</a>
         </div>
     </div>
 
