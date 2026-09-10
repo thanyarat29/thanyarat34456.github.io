@@ -1,32 +1,123 @@
-<!-- นี่คือโครงสร้างหน้าเว็บทังหมด ้ -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<title>หน้าแนะน;าตัวของฉัน</title>
-<style>
-body {
-background-color: skyblue; color: #333;
-text-align: center; padding: 50px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - หน้าแรก</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sarabun', sans-serif;
+        }
 
-}
-.card {
-background: white; border-radius: 10px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-max-width: 500px; margin: 0 auto; padding: 30px;
+        body {
+            background: linear-gradient(135deg, #ffe6ed 0%, #ffb6c1 50%, #f78da7 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-}
-h1 { color: #2c3e50; }
-p { font-size: 18px; line-height: 1.6; }
-</style>
+        .container {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 40px 25px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 15px 35px rgba(216, 27, 96, 0.2);
+            text-align: center;
+            border: 2px solid #ffccd5;
+        }
+
+        .profile-box {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            padding: 5px;
+            background: linear-gradient(135deg, #ff85a2, #e91e63);
+            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.3);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #d81b60;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #333333;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .school {
+            font-size: 0.95rem;
+            color: #666666;
+            margin-bottom: 25px;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff4081, #d81b60);
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(216, 27, 96, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(216, 27, 96, 0.45);
+        }
+    </style>
 </head>
 <body>
-<div class="card">
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน </h1>
-<p>สวัสดีครับ! ผมช่อื <strong>ธัญญารัตน์ (Thanyarat)</strong></p>
-<p>ขณะนี้ก;าลังศึกษา/สนใจด้าน Computer Science & Engineering</p>
-<p>นี่คือเว็บไซต์แรกของผมที่โฮสต์บน GitHub Pages!</p>
-  <a href="portfolio.html" style="display:inline-block; background:#3498db; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; margin-top:15px;">👉 ดูแฟ้มสะสมงานของผม</a>
-</div>
+
+    <div class="container">
+        <div class="profile-box">
+            <img src="IMG_0696.jpeg" alt="รูปโปรไฟล์" class="profile-img">
+        </div>
+
+        <h1 class="title">PORTFOLIO</h1>
+        <p class="subtitle">นางสาว ณัฐธิดา ถกลพัฒนกุล</p>
+        <p class="school">โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"</p>
+
+        <div class="btn-group">
+            <a href="about.html" class="btn btn-primary">เริ่มต้นรู้จักกัน &rarr;</a>
+        </div>
+    </div>
+
 </body>
 </html>
