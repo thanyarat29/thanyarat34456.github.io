@@ -1,36 +1,137 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta viewport="width=device-width, initial-scale=1.0">
-<title>แฟมสะสมงานของฉัน  </title>
-  <img src="my-profile.png" alt="รูปโปรไฟล์ของฉัน" width="200">
-<style>
-body { font-family: sans-serif; background-color: #f4f7f6; text-align: center;
-padding: 30px; }
-.container { max-width: 800px; margin: 0 auto; }
-.project-card { background: white; padding: 20px; margin: 20px 0; border-radius:
-8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
-.btn { display: inline-block; background: #2c3e50; color: white; padding: 10px
-20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Works - ผลงานของฉัน</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffe6ed 0%, #ffb6c1 50%, #f78da7 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 15px;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 30px 20px;
+            width: 100%;
+            max-width: 480px;
+            box-shadow: 0 15px 35px rgba(216, 27, 96, 0.2);
+            border: 2px solid #ffccd5;
+        }
+
+        .header-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed #ffccd5;
+        }
+
+        .page-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #d81b60;
+        }
+
+        .home-btn {
+            text-decoration: none;
+            color: #ad1457;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: #fff0f3;
+            padding: 6px 14px;
+            border-radius: 15px;
+            border: 1px solid #ffccd5;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 2px solid #ffccd5;
+            border-radius: 18px;
+            padding: 8px;
+            height: 230px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+
+        .card img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: #ffffff;
+            color: #d81b60;
+            border: 2px solid #ff85a2;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #fff0f3;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<h1> แฟมสะสมงาน  (Portfolio) ธัญญารัตน์ ชูสวัสดิ์</h1>
-<p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจครับ</p>
-<!-- กล่องผลงานชนที่ ้ิ 1 -->
-<div class="project-card">
-<h3>1. โครงงาน/ชนงานวิทยาศาสตร์ค;านวณ ิ้ </h3>
-<p>รายละเอียดชนงาน ิ้ : เขียนอธิบายสันๆ ว่าท;าอะไร ได้เรียนรู้อะไรจากงานนี้บ้าง ้ </p>
-</div>
-<!-- กล่องผลงานชนที่ ้ิ 2 -->
-<div class="project-card">
-<h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
-<p>รายละเอียดชนงาน ิ้ : เข้าร่วมการประกวด หรือกิจกรรมของโรงเรียน...</p>
-</div>
-<!-- ปุ่มกดกลับหน้าแรก -->
-<a href="index.html" class="btn"> กลับหน้าแรก</a>
-</div>
+
+    <div class="container">
+        <div class="header-box">
+            <h1 class="page-title">ผลงานของฉัน</h1>
+            <a href="index.html" class="home-btn">&larr; กลับหน้าแรก</a>
+        </div>
+
+        <div class="gallery">
+            <div class="card"><img src="IMG_0690.jpeg" alt="ผลงาน 1"></div>
+            <div class="card"><img src="IMG_0694.jpeg" alt="ผลงาน 2"></div>
+            <div class="card"><img src="IMG_0691.jpeg" alt="ผลงาน 3"></div>
+            <div class="card"><img src="IMG_0692.jpeg" alt="ผลงาน 4"></div>
+            <div class="card"><img src="IMG_0693.jpeg" alt="ผลงาน 5"></div>
+        </div>
+
+        <div class="btn-group">
+            <a href="about.html" class="btn">&larr; ย้อนกลับไปหน้าประวัติ</a>
+        </div>
+    </div>
+
 </body>
 </html>
