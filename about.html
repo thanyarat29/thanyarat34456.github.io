@@ -111,39 +111,26 @@
         font-weight: 500;
     }
 
-    .btn-group {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        margin-top: 30px;
-    }
-
-    .btn {
-        display: inline-block;
-        text-decoration: none;
-        padding: 10px 20px;
+    /* ปุ่มดูผลงาน */
+    .portfolio-btn {
+        display: block;
+        margin: 25px auto 0;
+        width: 80%;
+        padding: 12px 20px;
         border-radius: 25px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
         text-align: center;
-        flex: 1;
-    }
-
-    .btn-secondary {
-        background: #ffffff;
-        color: #73bde8;
-        border: 2px solid #95c8d8;
-    }
-
-    .btn-primary {
-        background: linear-gradient(135deg, #73c2fb, #89CFEF);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
         color: #ffffff;
+        background: linear-gradient(135deg, #73c2fb, #89CFEF);
         box-shadow: 0 4px 12px rgba(115, 194, 251, 0.3);
+        transition: all 0.3s ease;
     }
 
-    .btn:hover {
+    .portfolio-btn:hover {
         transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(115, 194, 251, 0.4);
     }
 
     @media (max-width: 500px) {
@@ -164,8 +151,8 @@
             text-align: left;
         }
 
-        .btn-group {
-            flex-direction: column;
+        .portfolio-btn {
+            width: 100%;
         }
     }
 </style>
@@ -175,133 +162,89 @@
 
 <body>
 
-```
 <div class="container">
 
-    <h1 class="page-title">ABOUT ME</h1>
-    <p class="subtitle">ประวัติส่วนตัวของฉัน</p>
+```
+<h1 class="page-title">ABOUT ME</h1>
+<p class="subtitle">ประวัติส่วนตัวของฉัน</p>
 
+<!-- ข้อมูลส่วนตัว -->
+<h2 class="section-title">ข้อมูลส่วนตัว</h2>
 
-    <!-- ข้อมูลส่วนตัว -->
-    <h2 class="section-title">ข้อมูลส่วนตัว</h2>
+<div class="info-list">
 
-    <div class="info-list">
-
-        <div class="info-item">
-            <span class="info-label">ชื่อ-นามสกุล</span>
-            <span class="info-value">ธัญญารัตน์ ชูสวัสดิ์</span>
-        </div>
-
-        <div class="info-item">
-            <span class="info-label">ชื่อเล่น</span>
-            <span class="info-value">ก้อย</span>
-        </div>
-
-        <div class="info-item">
-            <span class="info-label">วันเกิด</span>
-            <span class="info-value">9 ธันวาคม 2551</span>
-        </div>
-
-        <div class="info-item">
-            <span class="info-label">อายุ</span>
-            <span class="info-value">17 ปี</span>
-        </div>
-
-        <div class="info-item">
-            <span class="info-label">โรงเรียน</span>
-            <span class="info-value">
-                บ้านบึง "อุตสาหกรรมนุเคราะห์"
-            </span>
-        </div>
-
-        <div class="info-item">
-            <span class="info-label">เชื้อชาติ / สัญชาติ</span>
-            <span class="info-value">
-                ไทย / ไทย
-            </span>
-        </div>
-
-        <div class="info-item">
-            <span class="info-label">ศาสนา</span>
-            <span class="info-value">
-                พุทธ
-            </span>
-        </div>
-
-        <div class="info-item">
-            <span class="info-label">งานอดิเรก</span>
-            <span class="info-value">
-                ฟังเพลง, เล่นเกม
-            </span>
-        </div>
-
-        <div class="info-item">
-            <span class="info-label">แผนการเรียน</span>
-            <span class="info-value">
-                วิศวะคอมพิวเตอร์ (CSE)
-            </span>
-        </div>
-
+    <div class="info-item">
+        <span class="info-label">ชื่อ-นามสกุล</span>
+        <span class="info-value">ธัญญารัตน์ ชูสวัสดิ์</span>
     </div>
 
-
-    <!-- ประวัติการศึกษา -->
-    <h2 class="section-title">ประวัติการศึกษา</h2>
-
-    <div class="education-item">
-
-        <div class="education-level">
-            ระดับประถมศึกษา
-        </div>
-
-        <div class="education-school">
-            โรงเรียนบ้านหนองขยาด
-        </div>
-
+    <div class="info-item">
+        <span class="info-label">ชื่อเล่น</span>
+        <span class="info-value">ก้อย</span>
     </div>
 
-
-    <div class="education-item">
-
-        <div class="education-level">
-            ระดับมัธยมศึกษาตอนต้น
-        </div>
-
-        <div class="education-school">
-            โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
-        </div>
-
+    <div class="info-item">
+        <span class="info-label">วันเกิด</span>
+        <span class="info-value">9 ธันวาคม 2551</span>
     </div>
 
-
-    <div class="education-item">
-
-        <div class="education-level">
-            ระดับมัธยมศึกษาตอนปลาย
-        </div>
-
-        <div class="education-school">
-            โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
-        </div>
-
+    <div class="info-item">
+        <span class="info-label">อายุ</span>
+        <span class="info-value">17 ปี</span>
     </div>
 
+    <div class="info-item">
+        <span class="info-label">โรงเรียน</span>
+        <span class="info-value">บ้านบึง "อุตสาหกรรมนุเคราะห์"</span>
+    </div>
 
-    <!-- ปุ่ม -->
-    <div class="btn-group">
+    <div class="info-item">
+        <span class="info-label">เชื้อชาติ / สัญชาติ</span>
+        <span class="info-value">ไทย / ไทย</span>
+    </div>
 
-        <a href="index.html" class="btn btn-secondary">
-            &larr; ย้อนกลับ
-        </a>
+    <div class="info-item">
+        <span class="info-label">ศาสนา</span>
+        <span class="info-value">พุทธ</span>
+    </div>
 
-        <a href="contact.html" class="btn btn-primary">
-            ข้อมูลการติดต่อ &rarr;
-        </a>
+    <div class="info-item">
+        <span class="info-label">งานอดิเรก</span>
+        <span class="info-value">ฟังเพลง, เล่นเกม</span>
+    </div>
 
+    <div class="info-item">
+        <span class="info-label">แผนการเรียน</span>
+        <span class="info-value">วิศวะคอมพิวเตอร์ (CSE)</span>
     </div>
 
 </div>
+
+<!-- ประวัติการศึกษา -->
+<h2 class="section-title">ประวัติการศึกษา</h2>
+
+<div class="education-item">
+    <div class="education-level">ระดับประถมศึกษา</div>
+    <div class="education-school">โรงเรียนบ้านหนองขยาด</div>
+</div>
+
+<div class="education-item">
+    <div class="education-level">ระดับมัธยมศึกษาตอนต้น</div>
+    <div class="education-school">โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</div>
+</div>
+
+<div class="education-item">
+    <div class="education-level">ระดับมัธยมศึกษาตอนปลาย</div>
+    <div class="education-school">โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</div>
+</div>
+
+<!-- ปุ่มดูผลงาน -->
+<a href="portfolio.html" class="portfolio-btn">
+    ดูผลงานของฉัน →
+</a>
 ```
+
+</div>
 
 </body>
 </html>
