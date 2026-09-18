@@ -1,53 +1,323 @@
-<div class="contact-list">
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<div class="contact-item">
-    <span class="contact-label">
-        📞 เบอร์โทรศัพท์
-    </span>
+    <title>Contact - ข้อมูลการติดต่อ</title>
 
-    <span class="contact-value">
-        <a href="tel:0968946266" style="color: #2c2c2c; text-decoration: none;">
-            096-894-6266
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(
+                135deg,
+                #95c8d8 0%,
+                #89CFEF 50%,
+                #C3EEFA 100%
+            );
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+
+            border-radius: 28px;
+
+            padding: 35px 25px;
+
+            width: 100%;
+            max-width: 550px;
+
+            box-shadow:
+                0 15px 35px rgba(0, 120, 180, 0.2);
+
+            border: 2px solid #89CFEF;
+        }
+
+        /* หัวข้อ */
+
+        .page-title {
+            font-size: 2rem;
+            font-weight: 700;
+
+            color: #73c2fb;
+
+            text-align: center;
+
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+
+            color: #89CFEF;
+
+            margin-bottom: 25px;
+        }
+
+        /* หัวข้อข้อมูล */
+
+        .section-title {
+            color: #5eb7e8;
+
+            font-size: 1.25rem;
+
+            font-weight: 700;
+
+            margin: 25px 0 12px;
+
+            padding-left: 10px;
+
+            border-left: 5px solid #89CFEF;
+        }
+
+        /* กล่องข้อมูล */
+
+        .contact-list {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+        .contact-item {
+            background: #f0faff;
+
+            border: 1px solid #C3EEFA;
+
+            border-radius: 16px;
+
+            padding: 16px 18px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+        .contact-label {
+            color: #5eb7e8;
+
+            font-weight: 600;
+
+            font-size: 0.95rem;
+
+            min-width: 120px;
+        }
+
+        .contact-value {
+            color: #2c2c2c;
+
+            font-weight: 500;
+
+            font-size: 0.95rem;
+
+            text-align: right;
+        }
+
+        /* ปุ่ม */
+
+        .btn-group {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 10px;
+
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            text-decoration: none;
+
+            padding: 10px 20px;
+
+            border-radius: 25px;
+
+            font-size: 0.9rem;
+
+            font-weight: 600;
+
+            transition: all 0.3s ease;
+
+            text-align: center;
+
+            flex: 1;
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+
+            color: #73bde8;
+
+            border: 2px solid #95c8d8;
+        }
+
+        .btn-primary {
+            background:
+                linear-gradient(
+                    135deg,
+                    #73c2fb,
+                    #89CFEF
+                );
+
+            color: #ffffff;
+
+            box-shadow:
+                0 4px 12px rgba(115, 194, 251, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* โทรศัพท์ */
+
+        @media (max-width: 500px) {
+
+            .container {
+                padding: 25px 18px;
+            }
+
+            .page-title {
+                font-size: 1.7rem;
+            }
+
+            .contact-item {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 4px;
+            }
+
+            .contact-value {
+                text-align: left;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="page-title">
+        CONTACT
+    </h1>
+
+    <p class="subtitle">
+        ข้อมูลการติดต่อ
+    </p>
+
+
+    <!-- ข้อมูลการติดต่อ -->
+
+    <h2 class="section-title">
+        ช่องทางการติดต่อ
+    </h2>
+
+    <div class="contact-list">
+
+        <div class="contact-item">
+
+            <span class="contact-label">
+                📞 เบอร์โทรศัพท์
+            </span>
+
+            <span class="contact-value">
+                0968946266
+            </span>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <span class="contact-label">
+                📧 อีเมล
+            </span>
+
+            <span class="contact-value">
+                thayaratnchuswasdi242@gmail.com
+            </span>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <span class="contact-label">
+                📷 Instagram
+            </span>
+
+            <span class="contact-value">
+                Thanyarat Chusawat
+            </span>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <span class="contact-label">
+                Facebook
+            </span>
+
+            <span class="contact-value">
+                Thanyarat Chusawat
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ปุ่มด้านล่าง -->
+
+    <div class="btn-group">
+
+        <a href="portfolio.html" class="btn btn-secondary">
+            ← ย้อนกลับ
         </a>
-    </span>
-</div>
 
-
-<div class="contact-item">
-    <span class="contact-label">
-        📧 อีเมล
-    </span>
-
-    <span class="contact-value">
-        <a href="mailto:thayaratnchuswasdi242@gmail.com"
-           style="color: #2c2c2c; text-decoration: none;">
-            thayaratnchuswasdi242@gmail.com
+        <a href="index.html" class="btn btn-primary">
+            หน้าหลัก
         </a>
-    </span>
-</div>
 
-
-<div class="contact-item">
-    <span class="contact-label">
-        Facebook
-    </span>
-
-    <span class="contact-value">
-        Thanyarat Chusawat
-    </span>
-</div>
-
-
-<div class="contact-item">
-    <span class="contact-label">
-        📷 Instagram
-    </span>
-
-    <span class="contact-value">
-        Thanyarat Chusawat
-    </span>
-</div>
-```
+    </div>
 
 </div>
+
+</body>
+</html>
